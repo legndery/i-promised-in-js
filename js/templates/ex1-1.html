@@ -1,0 +1,61 @@
+<script type="x-pretty-print" id='scCallback-template'>
+function callbackSp() {
+    $.getJSON('/jsons/emp.json', function (d1) {
+        console.log('Got emp.json')
+        console.log(JSON.stringify(d1, null, 2));
+
+        $.getJSON('/jsons/projects.json', function (d2) {
+            console.log('Got projects.json')
+            console.log(JSON.stringify(d2, null, 2));
+
+            $.getJSON('/jsons/skills.json', function (d3) {
+                console.log('Got skills.json')
+                console.log(JSON.stringify(d3, null, 2);
+                        
+            },
+                function (err3) {
+                    console.log(err3);
+                });
+        },
+            function (err2) {
+                console.log(err2);
+            });
+    },
+        function (err1) {
+            console.log(err1);
+        });
+}
+</script>
+
+<script type="x-pretty-print" id='callbackNamed-template'>
+var callbackNamed  = {
+    init:function(){
+        this.getEmp();
+    },
+    handleError:function(err){
+        console.log(`${err}`);
+    },
+    getEmp: function(){
+        $.getJSON('/jsons/emp.json', (d)=>{
+            console.log('Got emp.json')
+            console.log(`${JSON.stringify(d, null, 2)}`)
+
+            this.getProject();
+        }, this.handleError)
+    },
+    getProject:function(){
+        $.getJSON('/jsons/projects.json', (d)=>{
+            console.log('Got projects.json')
+            console.log(`${JSON.stringify(d, null, 2)}`)
+
+            this.getSkill()
+        },this.handleError);
+    },
+    getSkill:function(){
+        $.getJSON('/jsons/skills.json', (d)=>{
+            console.log('Got skills.json')
+            console.log(`${JSON.stringify(d, null, 2)}`)
+        },this.handleError);
+    }
+}
+</script>
