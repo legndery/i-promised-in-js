@@ -18,7 +18,7 @@ Understanding the Difference between Anonymous Callback, Named Callbacks, Promis
 
 # Demos
 1. Anynonymous callbacks (https://legndery.github.io/i-promised-in-js/#basic1)
-1. Named Callbacks (https://legndery.github.io/i-promised-in-js/#basic1)
-1. Promises (https://legndery.github.io/i-promised-in-js/#basic1)
-1. Promises with Generators using BluebirdJS (https://legndery.github.io/i-promised-in-js/#basic1)
-1. Async/Await (https://legndery.github.io/i-promised-in-js/#basic1)
+1. Named Callbacks (https://legndery.github.io/i-promised-in-js/#basic2)
+1. Promises (https://legndery.github.io/i-promised-in-js/#promise1)
+1. Promises with Generators using BluebirdJS (https://legndery.github.io/i-promised-in-js/#promise2)
+1. Async/Await (https://legndery.github.io/i-promised-in-js/#promise3)
